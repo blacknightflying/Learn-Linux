@@ -1,0 +1,39 @@
+基本命令
+帮助命令
+man
+绝大部分的软件安装都为执行程序提供了帮助手册
+编译安装的软件，可以配置/etc/man.config
+指定man手册路径
+
+man命令大多给出的文档非常详细，可能有的时候并不想详读，这时候推荐使用tldr查看帮助文档。tldr是一个在线的帮助文档工具，提供的文档比较社区化，简短易懂，悲伤的是Linux机器上默认是没有tldr的，需要自己安装下，详细文档在这里。
+
+目录&文件命令
+命令	简介	示例
+cp	复制文件/目录	cp path/to/file.ext path/to/copy.ext <br> cp path/to/file.ext path/to/copy
+rm	删除文件/目录	rm path/to/file <br> rm -r path/to/folder
+mv	移动文件/目录	mv source target
+which	查找命了文件所在位置	which node
+find	查找文件或目录	find root_path -name '*.ext' <br> find root_path -size +500k -size -10MB
+ln	创建文件/目录的链接	ln node-v6.2 node
+touch	新建空文件	touch filename
+file	查看文件类型	file filename
+pwd	查看当前工作目录	pwd
+cd	切换工作目录	cd /path
+ls	显示目录内容	ls -lh
+mkdir	创建新的目录	mkdir –p /directory
+du	统计目录及文件的空间占用情况	du -sh <br> du -h --max-depth=N path/to/folder
+Tips: 几个常见的命令行参数
+-h -human-readable 以人能看懂的方式展示
+-r 递归文件夹
+-f -force 强制
+
+内容查看命令
+命令	简介	示例
+cat	查看显示文件内容	cat filename
+more/less	分页查看文件内容	less filename
+head/tail	查看文件开头/末尾的部分内容	tail -f web.log
+wc	统计文件内容的单词数量等信息	
+grep	检索过滤文件内容	cat package.json | grep 'vue'
+
+
+
